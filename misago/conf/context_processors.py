@@ -17,6 +17,7 @@ def conf(request):
         "LOGOUT_URL": settings.LOGOUT_URL,
         "THREADS_ON_INDEX": settings.MISAGO_THREADS_ON_INDEX,
         "settings": request.settings,
+        "BASE_APP_URL": settings.BASE_APP_URL,
     }
 
 

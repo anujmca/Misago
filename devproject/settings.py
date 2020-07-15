@@ -49,9 +49,9 @@ DATABASES = {
     "default": {
         # Misago requires PostgreSQL to run
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB"),
-        "USER": os.environ.get("POSTGRES_USER"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
+        "NAME": 'misago',
+        "USER": 'postgres',
+        "PASSWORD": '',
         "HOST": os.environ.get("POSTGRES_HOST"),
         "PORT": 5432,
     }
@@ -427,3 +427,5 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 DEBUG_TOOLBAR_CONFIG = {
     "SHOW_TOOLBAR_CALLBACK": "misago.conf.debugtoolbar.enable_debug_toolbar"
 }
+
+BASE_APP_URL = 'http://127.0.0.1:8000/'

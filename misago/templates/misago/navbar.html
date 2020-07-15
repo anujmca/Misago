@@ -3,7 +3,7 @@
 
   <div class="container navbar-full navbar-desktop-nav">
     {% if settings.logo_text or settings.logo %}
-      <a href="{% url 'misago:index' %}" class="navbar-brand">
+      <a href="{{ BASE_APP_URL }}" class="navbar-brand">
         {% if settings.logo %}
           <img src="{{ settings.logo }}" alt="">
         {% endif %}
