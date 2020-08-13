@@ -15,6 +15,7 @@ class UserDataValidator(forms.Form):
     username = forms.CharField()
     email = forms.CharField()
     is_active = forms.BooleanField(required=False)
+    website = forms.CharField()
 
     def clean_username(self):
         data = self.cleaned_data["username"]

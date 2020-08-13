@@ -29,6 +29,7 @@ def user_needs_updating(user, user_data):
             user.username != user_data["username"],
             user.email != user_data["email"],
             user.is_active != user_data.get("is_active", user.is_active),
+            user.profile_fields['website'] != user_data['website'],
         )
     )
 
@@ -40,4 +41,6 @@ def update_user(user, user_data):
         user.set_email(user_data["email"])
     if user.is_active != user_data.get("is_active", user.is_active):
         user.is_active = user_data["is_active"]
+    if user.profile_fields['website'] != user_data['website']:
+        user.profile_fields['website'] = user_data['website']
     user.save()
